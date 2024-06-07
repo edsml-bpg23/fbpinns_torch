@@ -17,14 +17,11 @@ Created on Thu Apr  1 15:11:31 2021
 import numpy as np
 import torch
 
-import boundary_conditions
-import losses
+from fbpinns import boundary_conditions
+from fbpinns import losses
 
-import sys
-sys.path.insert(0, '../analytical_solutions/')
-from burgers_solution import burgers_viscous_time_exact1
-sys.path.insert(0, '../seismic-cpml')
-from seismic_CPML_2D_pressure_second_order import seismicCPML2D
+from fbpinns.analytical_solutions.burgers_solution import burgers_viscous_time_exact1
+from fbpinns.seismic_cpml.seismic_CPML_2D_pressure_second_order import seismicCPML2D
 
 
 class _Problem:

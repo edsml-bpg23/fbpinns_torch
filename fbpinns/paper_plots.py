@@ -15,8 +15,8 @@ import torch
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 
-from domains import itergrid
-from plot_main_1D import lim
+from fbpinns.domains import itergrid
+from fbpinns.plot_main_1D import lim
 
 colors = ['tab:blue', 'tab:orange', 'tab:green', 'tab:red', 'tab:purple', 'tab:brown', 'tab:gray', 'tab:pink', 'tab:olive', 'tab:cyan']*100
 letters = ["(a)", "(b)", "(c)", "(d)", "(e)", "(f)", "(g)", "(h)", "(i)", "(j)", "(k)", "(l)", "(m)", "(n)", "(o)", "(p)", "(q)", "(r)", "(s)", "(t)", "(u)", "(v)", "(w)", "(x)", "(y)", "(z)"]

@@ -16,11 +16,8 @@ import pickle
 import numpy as np
 import torch
 
-import domains
-
-import sys
-sys.path.insert(0, '../shared_modules/')
-from helper import DictToObj
+from fbpinns import domains
+from fbpinns.common.helper import DictToObj
 
 
 def _restore_model(file, c):

@@ -807,7 +807,7 @@ def imtqlx_test ( ):
   n = 5
   d = np.zeros ( n )
   for i in range ( 0, n ):
-    d[i] = 2.0;
+    d[i] = 2.0
   e = np.zeros ( n )
   for i in range ( 0, n - 1 ):
     e[i] = -1.0

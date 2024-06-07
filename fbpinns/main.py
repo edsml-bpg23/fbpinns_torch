@@ -20,9 +20,9 @@ import torch.optim
 
 import plot_main
 import losses
-from trainersBase import _Trainer
-from constants import Constants
-from domains import ActiveRectangularDomainND
+from fbpinns.trainersBase import _Trainer
+from fbpinns.constants import Constants
+from fbpinns.domains import ActiveRectangularDomainND
 
 
 ## HELPER FUNCTIONS

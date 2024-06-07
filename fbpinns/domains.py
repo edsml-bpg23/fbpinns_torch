@@ -21,8 +21,8 @@ import itertools
 import numpy as np
 import torch
 
-import domainsBase
-import windows
+from fbpinns import domainsBase
+from fbpinns import windows
 
 
 

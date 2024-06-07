@@ -8,18 +8,14 @@ Created on Fri Apr  9 23:48:06 2021
 
 # This script reproduces all of the paper results
 
-import sys
 
 import numpy as np
 
-import problems
-from active_schedulers import AllActiveSchedulerND, PointActiveSchedulerND, LineActiveSchedulerND, PlaneActiveSchedulerND
-from constants import Constants, get_subdomain_xs, get_subdomain_ws
-from main import FBPINNTrainer, PINNTrainer
-from trainersBase import train_models_multiprocess
-
-sys.path.insert(0, '../shared_modules/')
-import multiprocess
+from fbpinns.active_schedulers import AllActiveSchedulerND, PointActiveSchedulerND, LineActiveSchedulerND
+from fbpinns.constants import Constants, get_subdomain_xs, get_subdomain_ws
+from fbpinns.main import FBPINNTrainer, PINNTrainer
+from fbpinns.trainersBase import train_models_multiprocess
+from fbpinns.common import multiprocess
 
 
 

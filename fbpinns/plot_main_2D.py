@@ -13,12 +13,9 @@ Created on Mon Apr 19 17:31:37 2021
 import matplotlib.pyplot as plt
 import matplotlib.tri as tri
 
-import plot_domain
-from plot_main_1D import _to_numpy, _plot_setup
-
-import sys
-sys.path.insert(0, '../shared_modules/')
-from helper import Timer
+from fbpinns import plot_domain
+from fbpinns.plot_main_1D import _to_numpy, _plot_setup
+from fbpinns.common.helper import Timer
 
 
 def _plot_test_im(y, xlim, ylim, c):

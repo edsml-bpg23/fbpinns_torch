@@ -14,7 +14,7 @@ import pickle
 
 import sys
 sys.path.insert(0, '../shared_modules/')
-import io_utils
+from fbpinns.common import io_utils
 
 
 class ConstantsBase:

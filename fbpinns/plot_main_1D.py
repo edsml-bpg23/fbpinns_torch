@@ -14,7 +14,7 @@ import numpy as np
 import torch
 import matplotlib.pyplot as plt
 
-import plot_domain
+from fbpinns import plot_domain
 
 
 

@@ -12,8 +12,8 @@ Created on Mon Apr 19 17:31:37 2021
 
 import matplotlib.pyplot as plt
 
-import plot_domain
-from plot_main_1D import _to_numpy, _plot_setup
+from fbpinns import plot_domain
+from fbpinns.plot_main_1D import _to_numpy, _plot_setup
 
 
 def _plot_test_im(it, y, xlim, ylim, c):

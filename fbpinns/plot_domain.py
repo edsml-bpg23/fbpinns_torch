@@ -15,7 +15,7 @@ import torch
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 
-from domains import itergrid
+from fbpinns.domains import itergrid
 
 colors = ['tab:blue', 'tab:orange', 'tab:green', 'tab:red', 'tab:purple', 'tab:brown', 'tab:pink', 'tab:gray', 'tab:olive', 'tab:cyan']*100
 

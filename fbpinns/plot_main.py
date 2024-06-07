@@ -10,9 +10,9 @@ Created on Mon Apr 19 17:33:12 2021
 
 # This module is used during training by main.py
 
-import plot_main_1D
-import plot_main_2D
-import plot_main_3D
+from fbpinns import plot_main_1D
+from fbpinns import plot_main_2D
+from fbpinns import plot_main_3D
 
 
 def plot_FBPINN(*args):
