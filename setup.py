@@ -8,7 +8,6 @@ setup(
     packages=["fbpinns"],
     version="1.0.0",
     description="Packaging for PyTorch FBPINNs",
-    author="Bejamin Mosely, Benedict Grey",
-    author_email="bpg23@ic.ac.uk",
+    author="Bejamin Mosely",
     install_requires=packages,
 )

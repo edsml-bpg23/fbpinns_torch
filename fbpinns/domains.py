@@ -21,7 +21,7 @@ import itertools
 import numpy as np
 import torch
 
-from fbpinns import domainsBase
+from fbpinns import domains_base
 from fbpinns import windows
 
 
@@ -46,7 +46,7 @@ from fbpinns import windows
 itergrid = lambda shape: enumerate(itertools.product(*[np.arange(d) for d in shape]))
 
 
-class ActiveRectangularDomainND(domainsBase._RectangularDomainND):
+class ActiveRectangularDomainND(domains_base._RectangularDomainND):
     "ND domain with hyperrectangular subdomains, where the active model grid can be controlled"
     
     
@@ -342,9 +342,9 @@ class ActiveRectangularDomainND(domainsBase._RectangularDomainND):
 if __name__ == "__main__":
 
     import matplotlib.pyplot as plt
-    
-    import plot_domain
-    
+
+    from fbpinns.plot import plot_domain
+
     import sys
     sys.path.insert(0, '../shared_modules/')
     from helper import Timer
@@ -394,7 +394,7 @@ if __name__ == "__main__":
                     
                     iis = ii + 0.1*(iiis[:,1:]-ii)# shift segment grid points to be around model grid point
                     for i,e in enumerate(iis):
-                        plt.scatter(e[0], 0, c=plot_domain.colors[ioas[i]], s=10*(1+50*(D.N_ORDERS-ioas[i])))
+                        plt.scatter(e[0], 0, c=plot_domain.colors[ioas[i]], s=10 * (1 + 50 * (D.N_ORDERS - ioas[i])))
             plt.gca().set_aspect("equal")
             plt.show()
     
@@ -456,7 +456,7 @@ if __name__ == "__main__":
                     
                     iis = ii + 0.1*(iiis[:,1:]-ii)# shift segment grid points to be around model grid point
                     for i,e in enumerate(iis):
-                        plt.scatter(e[0], e[1], c=plot_domain.colors[ioas[i]], s=10*(1+50*(D.N_ORDERS-ioas[i])))
+                        plt.scatter(e[0], e[1], c=plot_domain.colors[ioas[i]], s=10 * (1 + 50 * (D.N_ORDERS - ioas[i])))
             plt.gca().set_aspect("equal")
             plt.show()
         
@@ -494,7 +494,7 @@ if __name__ == "__main__":
         
         # 3D domain plot in x
         if plot:
-            plot_domain.plot_2D_cross_section(subdomain_xs, D, [0,1])
+            plot_domain.plot_2D_cross_section(subdomain_xs, D, [0, 1])
             for x in xs:
                 if x is not None:
                     plt.scatter(x[:,0], x[:,1], marker="^", s=30)

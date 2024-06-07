@@ -26,20 +26,20 @@ from fbpinns.seismic_cpml.seismic_CPML_2D_pressure_second_order import seismicCP
 
 class _Problem:
     "Base problem class to be inherited by different problem classes"
-    
+
     @property
     def name(self):
         "Defines a name string (only used for labelling automated training runs)"
         raise NotImplementedError
     
     def __init__(self):
-        raise NotImplementedError
+        pass
     
-    def physics_loss(self, x, *yj):
+    def physics_loss(self, x: torch.Tensor, *yj) -> torch.Tensor:
         "Defines the PINN physics loss to train the NN"
         raise NotImplementedError
         
-    def get_gradients(self, x, y):
+    def get_gradients(self, input_x: torch.Tensor, u: torch.Tensor) -> tuple[torch.Tensor, ...]:
         "Returns the gradients yj required for this problem"
         
     def boundary_condition(self, x, *yj, args):
@@ -557,7 +557,7 @@ if __name__ == "__main__":
     import matplotlib.pyplot as plt
     
     import problems
-    from main import _x_mesh
+    from trainers import _x_mesh
     
     # check velocity models for WaveEquation3D
     

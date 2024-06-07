@@ -1,0 +1,29 @@
+RUN: PINN_HarmonicOscillator_0.2-5
+P: <__main__.HarmonicOscillator1D object at 0x72370f40bf90>
+SUBDOMAIN_XS: [array([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10])]
+SUBDOMAIN_WS: [array([1.25663706e+10, 1.25663706e+10, 1.25663706e+10, 1.25663706e+10,
+       1.25663706e+10, 1.25663706e+10])]
+BOUNDARY_N: (0.2,)
+Y_N: (-1, 1)
+ACTIVE_SCHEDULER: <class 'fbpinns.active_schedulers.PointActiveSchedulerND'>
+ACTIVE_SCHEDULER_ARGS: (array([0]),)
+DEVICE: 0
+MODEL: <class 'fbpinns.models.FCN'>
+N_HIDDEN: 32
+N_LAYERS: 3
+BATCH_SIZE: (400,)
+RANDOM: False
+LRATE: 0.001
+N_STEPS: 10000
+SEED: 123
+BATCH_SIZE_TEST: (1000,)
+PLOT_LIMS: (1.2, False)
+SUMMARY_FREQ: 250
+TEST_FREQ: 5000
+MODEL_SAVE_FREQ: 10000
+SHOW_FIGURES: True
+SAVE_FIGURES: False
+CLEAR_OUTPUT: True
+SUMMARY_OUT_DIR: results/summaries/PINN_HarmonicOscillator_0.2-5/
+MODEL_OUT_DIR: results/models/PINN_HarmonicOscillator_0.2-5/
+HOSTNAME: benedict-x570-aorus-pro

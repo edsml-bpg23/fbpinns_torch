@@ -10,7 +10,7 @@ Created on Tue May 14 14:03:56 2019
 
 import numpy as np
 import time
-from seismic_CPML_helper import get_dampening_profiles
+from fbpinns.seismic_cpml.seismic_CPML_helper import get_dampening_profiles
 
 # todo: is this faster in parallel with np.roll?
 

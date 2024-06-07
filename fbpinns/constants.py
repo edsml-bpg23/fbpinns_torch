@@ -16,20 +16,21 @@ import socket
 
 import numpy as np
 
-import models
-import problems
-import active_schedulers
-from constantsBase import ConstantsBase
+from fbpinns import models
+from fbpinns import problems
+from fbpinns import active_schedulers
+from fbpinns.constants_base import ConstantsBase
 
 
 
 # helper functions
 
+
 def get_subdomain_xs(ds, scales):
     xs = []
     for d,scale in zip(ds, scales):
         x = np.cumsum(np.pad(d, (1,0)))
-        x = 2*(x-x.min())/(x.max()-x.min())-1# normalise to [-1, 1]
+        x = 2*(x-x.min())/(x.max()-x.min())-1  # normalise to [-1, 1]
         xs.append(scale*x)
     return xs
 
@@ -62,7 +63,7 @@ class Constants(ConstantsBase):
         # Define normalisation parameters
         self.BOUNDARY_N = (1/self.P.w,)# sd
         #self.Y_N = (0,1/self.P.w)# mu, sd
-        self.Y_N = (0,1/self.P.w**2)# mu, sd
+        self.Y_N = (0, 1/self.P.w**2) # mu, sd
         
         # Define scheduler
         self.ACTIVE_SCHEDULER = active_schedulers.PointActiveSchedulerND

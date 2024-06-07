@@ -1,0 +1,29 @@
+RUN: final_PINN_WaveEquation3D_s0.1c1.0_64h_2l_50b_m
+P: <__main__.WaveEquation3D object at 0x7eafd0c6bf90>
+SUBDOMAIN_XS: [array([-1.  , -0.33,  0.33,  1.  ]), array([-1.  , -0.33,  0.33,  1.  ]), array([0. , 0.5, 1. ])]
+SUBDOMAIN_WS: [array([1.25663706e+10, 1.25663706e+10, 1.25663706e+10, 1.25663706e+10,
+       1.25663706e+10, 1.25663706e+10])]
+BOUNDARY_N: (0.1,)
+Y_N: (0, 1)
+ACTIVE_SCHEDULER: <class 'fbpinns.active_schedulers.PointActiveSchedulerND'>
+ACTIVE_SCHEDULER_ARGS: (array([0]),)
+DEVICE: 0
+MODEL: <class 'fbpinns.models.FCN'>
+N_HIDDEN: 64
+N_LAYERS: 2
+BATCH_SIZE: (50, 50, 50)
+RANDOM: True
+LRATE: 0.001
+N_STEPS: 5000
+SEED: 123
+BATCH_SIZE_TEST: (50, 50, 10)
+PLOT_LIMS: (5.0, True)
+SUMMARY_FREQ: 250
+TEST_FREQ: 250
+MODEL_SAVE_FREQ: 10000
+SHOW_FIGURES: True
+SAVE_FIGURES: False
+CLEAR_OUTPUT: False
+SUMMARY_OUT_DIR: results/summaries/final_PINN_WaveEquation3D_s0.1c1.0_64h_2l_50b_m/
+MODEL_OUT_DIR: results/models/final_PINN_WaveEquation3D_s0.1c1.0_64h_2l_50b_m/
+HOSTNAME: benedict-x570-aorus-pro

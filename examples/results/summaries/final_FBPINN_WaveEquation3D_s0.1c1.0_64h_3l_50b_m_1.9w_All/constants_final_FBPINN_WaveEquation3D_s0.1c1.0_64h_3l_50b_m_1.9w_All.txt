@@ -1,0 +1,28 @@
+RUN: final_FBPINN_WaveEquation3D_s0.1c1.0_64h_3l_50b_m_1.9w_All
+P: <__main__.WaveEquation3D object at 0x70783e304190>
+SUBDOMAIN_XS: [array([-1.        , -0.33333333,  0.33333333,  1.        ]), array([-1.        , -0.33333333,  0.33333333,  1.        ]), array([0.        , 0.33333333, 0.66666667, 1.        ])]
+SUBDOMAIN_WS: [array([1.26666667, 1.26666667, 1.26666667, 1.26666667]), array([1.26666667, 1.26666667, 1.26666667, 1.26666667]), array([0.63333333, 0.63333333, 0.63333333, 0.63333333])]
+BOUNDARY_N: (0.1,)
+Y_N: (0, 1)
+ACTIVE_SCHEDULER: <class 'fbpinns.active_schedulers.AllActiveSchedulerND'>
+ACTIVE_SCHEDULER_ARGS: ()
+DEVICE: 0
+MODEL: <class 'fbpinns.models.FCN'>
+N_HIDDEN: 64
+N_LAYERS: 3
+BATCH_SIZE: (50, 50, 30)
+RANDOM: True
+LRATE: 0.001
+N_STEPS: 2000
+SEED: 123
+BATCH_SIZE_TEST: (50, 50, 10)
+PLOT_LIMS: (5.0, True)
+SUMMARY_FREQ: 250
+TEST_FREQ: 1000
+MODEL_SAVE_FREQ: 10000
+SHOW_FIGURES: True
+SAVE_FIGURES: False
+CLEAR_OUTPUT: False
+SUMMARY_OUT_DIR: results/summaries/final_FBPINN_WaveEquation3D_s0.1c1.0_64h_3l_50b_m_1.9w_All/
+MODEL_OUT_DIR: results/models/final_FBPINN_WaveEquation3D_s0.1c1.0_64h_3l_50b_m_1.9w_All/
+HOSTNAME: benedict-x570-aorus-pro
